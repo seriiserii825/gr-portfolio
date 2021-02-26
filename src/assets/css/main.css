@@ -520,6 +520,11 @@ Services
     -webkit-transition: var(--transition);
     transition: var(--transition);
 }
+@media screen and (max-width: 576px) {
+    .service {
+        margin: 0 15px;
+    }
+}
 .service-icon {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -694,6 +699,9 @@ Projects
     width: 50%;
     z-index: 1;
 }
+.project-img img {
+    display: block;
+}
 .project-img::after {
     content: "";
     position: absolute;
@@ -720,7 +728,7 @@ Projects
 @media screen and (max-width: 992px) {
     .project {
         display: block;
-        padding: 0 30px;
+        padding: 0 15px;
         text-align: center;
     }
     .project-img {

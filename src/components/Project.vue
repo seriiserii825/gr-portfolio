@@ -1,6 +1,8 @@
 <template>
   <article class="project">
-    <img :src="adminUrl+image" class="project-img" alt="">
+    <div class="project-img">
+      <img :src="adminUrl+image" alt="">
+    </div>
     <div class="project-info">
       <span class="project-number">0{{ index + 1 }}</span>
       <h3>{{ title }}</h3>

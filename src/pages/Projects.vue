@@ -1,13 +1,38 @@
 <template>
-<Layout>
-    <h1>Projects</h1>
-</Layout>
+  <Layout>
+    <Projects :projects="$static.projects.edges" title="My projects" :showLink="false"/>
+  </Layout>
 </template>
 
+<static-query>
+{
+  projects: allStrapiProject {
+    edges {
+      node {
+        id
+        title
+        description
+        image {
+          url
+        }
+        github
+        url
+        featured
+        skills {
+          title
+        }
+      }
+    }
+  }
+}
+</static-query>
 <script>
-import Layout from './../layouts/Default';
-export default {
+import Projects from "../components/Projects";
 
+export default {
+  components: {
+    Projects
+  }
 }
 </script>
 
