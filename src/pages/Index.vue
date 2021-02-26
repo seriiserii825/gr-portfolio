@@ -4,6 +4,7 @@
     <Services/>
     <Jobs/>
     <Projects :projects="$static.projects.edges" title="Featured projects" :showLink="true"/>
+    <AllBlogs :blogs="$static.blogs.edges" title="My blogs" :showLink="true"/>
   </Layout>
 </template>
 
@@ -27,6 +28,21 @@
       }
     }
   }
+  blogs: allStrapiBlog {
+    edges {
+      node {
+        id
+        title
+        slug
+        description
+        image {
+          url
+        }
+        category
+        date(format: "MMMM Do, YYYY")
+      }
+    }
+  }
 }
 </static-query>
 
@@ -35,9 +51,11 @@ import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Jobs from "../components/Jobs";
 import Projects from "../components/Projects";
+import AllBlogs from "../components/AllBlogs";
 
 export default {
   components: {
+    AllBlogs,
     Jobs,
     Services,
     Hero,

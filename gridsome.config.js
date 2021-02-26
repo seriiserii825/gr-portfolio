@@ -17,7 +17,7 @@ module.exports = {
       options: {
         apiURL: "http://localhost:1337",
         queryLimit: 1000, // Defaults to 100
-        contentTypes: ["job", "project"],
+        contentTypes: ["job", "project", "blog"],
         // singleTypes: ['impressum'],
         // Possibility to login with a Strapi user,
         // when content types are not publicly available (optional).
