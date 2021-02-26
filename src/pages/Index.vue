@@ -2,15 +2,17 @@
   <Layout>
     <Hero/>
     <Services/>
+    <Jobs/>
   </Layout>
 </template>
 
 <script>
 import Hero from "../components/Hero";
 import Services from "../components/Services";
+import Jobs from "../components/Jobs";
 
 export default {
-  components: {Services, Hero},
+  components: {Jobs, Services, Hero},
   metaInfo: {
     title: 'Hello, world!'
   }

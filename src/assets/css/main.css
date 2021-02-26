@@ -603,6 +603,14 @@ Jobs
 .job-date {
     letter-spacing: var(--spacing);
 }
+@media screen and (max-width: 576px) {
+    .btn-container {
+        flex-direction: column;
+    }
+    .job-btn {
+        margin-bottom: 30px;
+    }
+}
 .job-desc {
     display: grid;
     grid-template-columns: auto 1fr;
