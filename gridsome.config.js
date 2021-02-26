@@ -5,29 +5,27 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: "Gridsome",
   chainWebpack: config => {
-    const svgRule = config.module.rule('svg')
-    svgRule.uses.clear()
-    svgRule
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader')
+    const svgRule = config.module.rule("svg");
+    svgRule.uses.clear();
+    svgRule.use("vue-svg-loader").loader("vue-svg-loader");
   },
   plugins: [
     {
-      use: '@gridsome/source-strapi',
+      use: "@gridsome/source-strapi",
       options: {
-        apiURL: 'http://localhost:1337',
+        apiURL: "http://localhost:1337",
         queryLimit: 1000, // Defaults to 100
-        contentTypes: ['job'],
+        contentTypes: ["job", "project"],
         // singleTypes: ['impressum'],
         // Possibility to login with a Strapi user,
         // when content types are not publicly available (optional).
         loginData: {
-          identifier: '',
-          password: ''
+          identifier: "",
+          password: ""
         }
       }
     }
   ]
-}
+};
