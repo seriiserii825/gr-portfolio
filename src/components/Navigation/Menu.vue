@@ -28,8 +28,8 @@ export default {
         },
         {
           id: 4,
-          text: "blog",
-          url: "/blog/",
+          text: "blogs",
+          url: "/blogs/",
         },
         {
           id: 5,

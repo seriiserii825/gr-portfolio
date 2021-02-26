@@ -1,9 +1,32 @@
 <template>
-
+  <Layout>
+    <AllBlogs :blogs="$static.blogs.edges" title="My blogs" :showLink="false"/>
+  </Layout>
 </template>
+<static-query>
+{
+  blogs: allStrapiBlog {
+    edges {
+      node {
+        id
+        title
+        slug
+        description
+        image {
+          url
+        }
+        category
+        date(format: "MMMM Do, YYYY")
+      }
+    }
+  }
+}
+</static-query>
 <script>
-export default {
+import AllBlogs from "../components/AllBlogs";
 
+export default {
+  components: {AllBlogs}
 }
 </script>
 
